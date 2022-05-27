@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
 
 ## About:
-This project tracks commit history of repository on github. For this project, I am using my csharp practice repository. Link to repository : https://github.com/ShrideviReddy/csharp-practice .
+This project tracks commit history of repository on github. For this project, I am tracking my csharp practice repository. Link to repository : https://github.com/ShrideviReddy/csharp-practice .
 
 Technologies used are: Angular, Typescript, GitHub API and bootstrap. 
 
@@ -39,7 +39,7 @@ To run this project locally:
 
 Following features will be added in next version:
 
-* Include more repository.
+* Include more repository data.
 * Separate styling code (i.e. CSS)
 * Add authetication/access token when accessing API.
 * Add more analytics/summary points. Maybe add visualization.
