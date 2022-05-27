@@ -1,0 +1,31 @@
+<!--Add separate css files for styling. Name div rows if required. Display content when clicked on history-->
+<!--Need more space from  top and h1 title. More aligned to paragraph.-->
+<!-- Add another div for table displaying data from API. When clicked on summary it will show summary of commit -->
+<!--Summary can be just simple summary or chart/visualization-->
+
+<div class = "container"name="header">
+	<div class="row">
+		
+		<h1 class="text-center"> Github Commit History </h1>
+	</div>
+	
+	<div class="row">	
+		<p class="text-center"> 
+		
+		This project displays commit history in real-time for project-enter name here.
+		Technology used : Angular framework and GitHub API.
+		
+		</p>
+	</div>
+        
+	<div class="row">
+		<div class="btn-group"role="group"aria-label="Basic example"style="justify-content:center;">
+	 
+		
+			<button class="btn btn-secondary" (click)="getCommitHistory();"type="button">History</button>
+		
+			<button class="btn btn-secondary" (click)="getSummary();"type="button">Summary</button>
+
+		</div>
+	</div>
+</div>
