@@ -34,7 +34,7 @@
     		</tr>
     		
 		<tr  *ngFor="let val of commitData; let i = index" style="text-align:center;">
-			<td> {{  val.commit.committer.date | date:'yyyy-MM-dd HH:mm:ss' }} EST  </td>
+			<td> {{  val.commit.committer.date | date:'yyyy-MM-dd HH:mm:ss' }}   </td>
       			<td> {{  val.commit.author.name   }}</td>
       			<td> {{  val.commit.committer.name   }}</td>
       			<td> {{  val.commit.message   }}</td>
