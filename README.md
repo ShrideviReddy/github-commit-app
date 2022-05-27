@@ -11,6 +11,7 @@ Technologies used are: Angular, Typescript, GitHub API and bootstrap.
 ## Prerequisites for Angular
 
 To install Angular on your local system, you need : `Node.js` and `npm package manager` 
+For download check this link `https://nodejs.org/en/download/` and for installation check resources online.  
 
 ## Install Angular
 
@@ -39,7 +40,8 @@ To run this project locally:
 
 Following features will be added in next version:
 
-* Include more repository data.
-* Separate styling code file (i.e. CSS)
+* Include more repository for tracking.
+* Timestamp format.
+* Separate styling code file (i.e. CSS).
 * Add authetication/access token when accessing API.
 * Add more analytics/summary points. Maybe add visualization.
