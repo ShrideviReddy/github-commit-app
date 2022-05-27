@@ -15,7 +15,7 @@ export class ApigithubService {
 	//const headers = new HttpHeaders({Authorization:'access_token'});
   	
 	return this.http.get(
-          'https://api.github.com/repos/ShrideviReddy/Text-Sentiment-Dashboard-Deployment/commits'
+          'https://api.github.com/repos/ShrideviReddy/csharp-practice/commits'
 	);
   }
 }
