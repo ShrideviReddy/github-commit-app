@@ -1,9 +1,6 @@
-<!--Add separate css files for styling. Name div rows if required. Display content when clicked on history-->
-<!--Need more space from  top and h1 title. More aligned to paragraph.-->
-<!-- Add another div for table displaying data from API. When clicked on summary it will show summary of commit -->
-<!--Summary can be just simple summary or chart/visualization-->
 
-<div class = "container"name="header">
+
+<div class = "container"name="header" style="padding-top:25px;">
 	<div class="row">
 		
 		<h1 class="text-center"> Github Commit History </h1>
@@ -12,20 +9,42 @@
 	<div class="row">	
 		<p class="text-center"> 
 		
-		This project displays commit history in real-time for project-enter name here.
-		Technology used : Angular framework and GitHub API.
+		This project displays commit history for csharp practice repo. Click button below.
 		
 		</p>
 	</div>
         
-	<div class="row">
-		<div class="btn-group"role="group"aria-label="Basic example"style="justify-content:center;">
+	<div class="row" style="justify-content:center;">
 	 
 		
-			<button class="btn btn-secondary" (click)="getCommitHistory();"type="button">History</button>
+			<button class="btn btn-secondary" (click)="getCommitHistory();" type="button" style="width:100px;">History</button>
 		
-			<button class="btn btn-secondary" (click)="getSummary();"type="button">Summary</button>
-
-		</div>
+			
 	</div>
+</div>
+
+<div class="container" style="justify-content: center;padding:35px 25px 0px 130px;">
+	<table *ngIf='showTable' class="center" style="width:800px; border-collapse:separate; border-spacing:0 5px;">
+    		
+		<tr style="text-align:center;">
+      			<th>Date</th>
+      			<th>Author</th>
+      			<th>Commiter</th>
+      			<th>Commit Message</th>
+    		</tr>
+    		
+		<tr  *ngFor="let val of commitData; let i = index" style="text-align:center;">
+			<td> {{  val.commit.committer.date | date:'yyyy-MM-dd HH:mm:ss' }} EST  </td>
+      			<td> {{  val.commit.author.name   }}</td>
+      			<td> {{  val.commit.committer.name   }}</td>
+      			<td> {{  val.commit.message   }}</td>
+    		</tr>
+		
+		<tr></tr>
+		<tr>
+			<td></td>
+			<p style="padding-left:90px;font-weight:bold;"> Total Commit: {{  this.totalCommit }} </p>
+		</tr>
+	</table>
+
 </div>

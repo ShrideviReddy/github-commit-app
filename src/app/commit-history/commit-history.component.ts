@@ -2,12 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { ApigithubService } from "../apigithub.service";
 
 
+
 @Component({
   selector: 'app-commit-history',
   templateUrl: './commit-history.component.html',
   styleUrls: ['./commit-history.component.css']
 })
+
 export class CommitHistoryComponent implements OnInit {
+  public commitData: any;
+
+  public showTable: boolean = false;
+
+  public totalCommit: any;
+
 
   constructor(private apigithub: ApigithubService) {  }
 
@@ -16,13 +24,18 @@ export class CommitHistoryComponent implements OnInit {
 
   getCommitHistory():any{
   
-	  console.log("This is commit history");
-	  this.apigithub.getCommit().subscribe(data => console.log(data));
-  };
+	  this.showTable = !this.showTable;
+	  
+	  this.apigithub.getCommit().subscribe(data => {
+	          this.commitData = data;
+		  this.totalCommit = this.commitData.length;
 
-  getSummary():any{
-  
-  	console.log("This is summary");
+	  });
+	 
+
   };
 
 }
+
+
+
