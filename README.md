@@ -40,6 +40,6 @@ To run this project locally:
 Following features will be added in next version:
 
 * Include more repository data.
-* Separate styling code (i.e. CSS)
+* Separate styling code file (i.e. CSS)
 * Add authetication/access token when accessing API.
 * Add more analytics/summary points. Maybe add visualization.
